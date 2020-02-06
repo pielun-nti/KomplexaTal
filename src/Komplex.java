@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.Objects;
 
 public class Komplex {
     double real; //real är riktiga delen av ett komplex tal
