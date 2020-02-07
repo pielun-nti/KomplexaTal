@@ -19,8 +19,8 @@ public class Komplex {
 
         System.out.println("a = " + a);
         System.out.println("Talet borde vara 3 + 2i:\n" + a);
-        double adderad = 3.0 + 7.0 + 4.0 + 1.0;
-        String adderadstr = String.valueOf(adderad) + "i";
+        //double adderad = 3.0 + 7.0 + 4.0 + 1.0;
+        //String adderadstr = String.valueOf(adderad) + "i";
         if (e.equals(f)) { //Måste ändras
             System.out.println("Addera fungerar");
         }
