@@ -1,4 +1,4 @@
-import java.util.Objects;
+package pierre;
 
 public class Komplex {
     double real; //real är riktiga delen av ett komplex tal
@@ -8,16 +8,28 @@ public class Komplex {
         this.imag = imag;
     }
     public static void main(String[] args) {
-        Komplex a = new Komplex(2.3, 4.5);
-        Komplex b = new Komplex(3.4, 5.0);
+        Komplex a = new Komplex(3.0, 2.0);
+        Komplex b = new Komplex(4.0, 1.0);
+
+        Komplex c = a.add(b);
+        Komplex d = new Komplex(7,3);
 
         System.out.println("a = " + a);
+        System.out.println("Talet borde vara 3 + 2i:\n" + a);
+        if (c.equals(d)) {
+            System.out.println("Multiply fungerar");
+        }
         System.out.println("b = " + b);
         System.out.println("Re(a) = " + a.real);
         System.out.println("Im(a) = " + a.imag);
         System.out.println("a + b = " + a.add(b));
         System.out.println("a * b = "+ a.multiply(b));
         System.out.println("a to String: " + a.toString());
+        System.out.println("Talet a to String borde vara: " + "3 + 2i:\n" + a.toString());
+        System.out.println("Argumentet till 3+2i är " + arg(3.0, 2.0));
+        if (arg(3.0, 2.0) == Math.atan(2.0/3.0)) {
+            System.out.println("arg() fungerar!");
+        }
 
     }
 
@@ -49,5 +61,8 @@ public class Komplex {
         return (this.real == that.real) && (this.imag == that.imag);
     }
 
+    public static Double arg(double a1, double a2) {
+        return Math.atan(a2 / a1);
+    }
 
 }
