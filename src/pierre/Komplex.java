@@ -11,12 +11,20 @@ public class Komplex {
         Komplex a = new Komplex(3.0, 2.0);
         Komplex b = new Komplex(4.0, 1.0);
 
-        Komplex c = a.add(b);
+        Komplex c = a.multiply(b);
         Komplex d = new Komplex(7,3);
+
+        Komplex e = a.add(b);
+        Komplex f = new Komplex(7,3);
 
         System.out.println("a = " + a);
         System.out.println("Talet borde vara 3 + 2i:\n" + a);
-        if (c.equals(d)) {
+        double adderad = 3.0 + 7.0 + 4.0 + 1.0;
+        String adderadstr = String.valueOf(adderad) + "i";
+        if (e.equals(f)) { //Måste ändras
+            System.out.println("Addera fungerar");
+        }
+        if (c.equals(d)) { //Fungerar ej
             System.out.println("Multiply fungerar");
         }
         System.out.println("b = " + b);
